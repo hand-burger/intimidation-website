@@ -1,0 +1,564 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
+
+/* --- Basic default tags specifications --- */
+h1 {
+  font-size: 7vh;
+  padding-left: 6%;
+  padding-right: 3%;
+  color: #e9b744;
+}
+
+p {
+  font-size: 1.5rem;
+  padding-left: 10%;
+  padding-right: 5%;
+}
+a {
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: #f9e7cf;
+}
+body {
+  margin: 0;
+  font-family: "Prompt", sans-serif;
+  color: #f9e7cf;
+  background: #202731;
+  overflow-x: hidden;
+}
+.siteWrapper {
+  overflow-x: hidden;
+  position: relative;
+}
+section {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  min-height: 600px;
+  padding-top: 100px;
+}
+/* --- Makes images undraggable on all platforms --- */
+img {
+  -webkit-user-drag: none;
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+/* --- Color when words are highlighted --- */
+::-moz-selection {
+  background: #e9b744;
+}
+::selection {
+  background: #e9b744;
+}
+
+/* --- Guess what, font awesome uses the before pseudo element, because why would it not... --- */
+.fa::before {
+  font-size: 5vw;
+  padding-right: 2vw;
+}
+
+/* --- About section height adjustment --- */
+#about {
+  min-height: 255vh;
+}
+
+/* --- For the Hi I'm Jack part text-align: left doesn't work because of the section display property, so I had to do this to move it to the left --- */
+#hi {
+  display: block;
+  font-size: 1.7rem;
+  text-align: left;
+  position: relative;
+  right: 35vw;
+}
+
+/* --- Nav link styles, puts the links in the top left corner --- */
+.nav_links {
+  position: absolute;
+  top: 3%;
+  left: 2%;
+  width: 45%;
+}
+.nav_links li {
+  display: inline;
+  padding-left: 3%;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  width: 20%;
+}
+
+.nav_links a {
+  font-size: calc(0.8em + 1vw);
+  -webkit-transition: all 0.2s ease;
+  -o-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.nav_links a:hover {
+  color: #e9b744;
+}
+
+/* --- Hamburger button styles --- */
+
+/* --- Puts it in the top left --- */
+.menu-btn {
+  position: relative;
+  display: none;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.menu-btn__lines,
+.menu-btn__lines::before,
+.menu-btn__lines::after {
+  width: 2rem;
+  height: 0.2rem;
+  background-color: #f9e7cf;
+  -webkit-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.menu-btn__lines::before,
+.menu-btn__lines::after {
+  content: "";
+  position: absolute;
+}
+
+/* --- Moving animation of Hamburger to X --- */
+.menu-btn__lines::before {
+  -webkit-transform: translateY(-0.5rem);
+  -ms-transform: translateY(-0.5rem);
+  transform: translateY(-0.5rem);
+}
+.menu-btn__lines::after {
+  -webkit-transform: translateY(0.5rem);
+  -ms-transform: translateY(0.5rem);
+  transform: translateY(0.5rem);
+}
+.menu-btn.open .menu-btn__lines {
+  -webkit-transform: translateX(2rem);
+  -ms-transform: translateX(2rem);
+  transform: translateX(2rem);
+  background-color: transparent;
+}
+.menu-btn.open .menu-btn__lines::before {
+  -webkit-transform: rotate(45deg) translate(-1.5rem, 1.5rem);
+  -ms-transform: rotate(45deg) translate(-1.5rem, 1.5rem);
+  transform: rotate(45deg) translate(-1.5rem, 1.5rem);
+}
+.menu-btn.open .menu-btn__lines::after {
+  -webkit-transform: rotate(-45deg) translate(-1.5rem, -1.5rem);
+  -ms-transform: rotate(-45deg) translate(-1.5rem, -1.5rem);
+  transform: rotate(-45deg) translate(-1.5rem, -1.5rem);
+}
+
+/* --- Skills section --- */
+/* --- Styles for the whole circle section --- */
+.circle {
+  display: table-cell;
+  vertical-align: middle;
+  height: 100vmin;
+  width: 70vw;
+  overflow: hidden;
+  margin: auto;
+  border-radius: 1em;
+  background-color: #f9e7cf;
+  -webkit-box-shadow: -5px 5px 5px 2px rgba(0, 0, 0, 0.77);
+  box-shadow: -5px 5px 5px 2px rgba(0, 0, 0, 0.77);
+}
+
+.circle h2 {
+  padding-right: 1em;
+  text-align: center;
+}
+
+.left-section h2 {
+  color: #202731;
+  font-weight: 500;
+  font-size: 2.5vw;
+  padding-left: 0.5em;
+}
+
+.right-section h2 {
+  font-weight: 400;
+  font-size: calc(0.3em + 1.5vh);
+}
+
+.left-section {
+  color: #f9e7cf;
+  display: table-cell;
+  vertical-align: middle;
+  height: 100vmin;
+  width: 35vw;
+  background-color: #f9e7cf;
+}
+
+.right-section {
+  display: table-cell;
+  vertical-align: middle;
+  height: 100vmin;
+  width: 35vw;
+  background-color: #df4d40;
+}
+
+#about ol {
+  margin-bottom: 2em;
+}
+
+/* --- Project display --- */
+
+.projects_display {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  padding: 6vh 0 10vh 0;
+}
+
+.project_container {
+  margin-top: 10vh;
+  margin-left: 2.5vw;
+  margin-right: 2.5vw;
+  color: #202731;
+  border-radius: 10px;
+  width: 50vw;
+  height: 38vw;
+  background-color: #f9e7cf;
+  -webkit-box-shadow: 0px 1px 3px grey;
+  box-shadow: 0px 1px 3px grey;
+  padding: 1.5vw;
+  position: relative;
+  -webkit-transition: 0.25s ease;
+  -o-transition: 0.25s ease;
+  transition: 0.25s ease;
+}
+
+.project_container h3 {
+  text-align: center;
+  font-size: 1.6vw;
+}
+
+.project_container p,
+#wiki {
+  color: #202731;
+  text-align: left;
+  font-size: 1vw;
+  margin: 2vw 1vw 1vw 0;
+}
+
+.button {
+  font-size: 1.1vw;
+  color: #e0af3c;
+  width: calc(100% - 3vw - 0.8em);
+  text-align: center;
+  padding: 0.7vw 0;
+  background-color: #f3e9dc;
+  position: absolute;
+  bottom: 1.5em;
+  border: solid 3px #e9b744;
+  -webkit-transition: 0.25s ease;
+  -o-transition: 0.25s ease;
+  transition: 0.25s ease;
+}
+
+.button:hover {
+  color: #f9e7cf;
+  background-color: #e9b744;
+}
+
+.project_container img {
+  border-radius: 10px;
+  max-width: 100%;
+  max-height: 40%;
+  display: block;
+  margin: auto;
+}
+
+.project_container:hover {
+  -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+    0 10px 10px rgba(0, 0, 0, 0.22);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+/* --- Contact page --- */
+#contact {
+  padding-top: 0;
+}
+
+.contact a {
+  /* --- table cell because well, that's the only display that works 👍 --- */
+  display: table-cell;
+  padding: 1.5vw;
+}
+
+.contact a:hover {
+  border-radius: 5px;
+  background-color: #f9e7cf;
+  color: #e9b744;
+}
+
+/* --- Footer style --- */
+footer {
+  padding: 0.7% 0;
+  background-color: #161b24;
+}
+
+footer p {
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+#names {
+  color: #e9b744;
+}
+
+.gradientCurve {
+  background: rgb(55, 56, 96);
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    from(rgba(55, 56, 96, 1)),
+    color-stop(30%, rgba(115, 60, 128, 1)),
+    color-stop(65%, rgba(189, 42, 131, 1)),
+    color-stop(88%, rgba(255, 0, 102, 1))
+  );
+  background: -o-linear-gradient(
+    top,
+    rgba(55, 56, 96, 1) 0%,
+    rgba(115, 60, 128, 1) 30%,
+    rgba(189, 42, 131, 1) 65%,
+    rgba(255, 0, 102, 1) 88%
+  );
+  background: linear-gradient(
+    180deg,
+    rgba(55, 56, 96, 1) 0%,
+    rgba(115, 60, 128, 1) 30%,
+    rgba(189, 42, 131, 1) 65%,
+    rgba(255, 0, 102, 1) 88%
+  );
+}
+
+.orange {
+  background: #dd3f31;
+}
+
+.orange h1 {
+  padding-top: 12vh;
+}
+
+/* -- Curved bg with plain CSS --- */
+.curve {
+  position: absolute;
+  height: 250px;
+  width: 100%;
+  bottom: 0px;
+  text-align: center;
+}
+
+.curve::before {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 100% 50%;
+  width: 55%;
+  height: 100%;
+  -webkit-transform: translate(85%, 60%);
+  -ms-transform: translate(85%, 60%);
+  transform: translate(85%, 60%);
+  background-color: hsl(216, 21%, 16%);
+}
+
+.curve::after {
+  content: "";
+  display: block;
+  position: absolute;
+  border-radius: 100% 50%;
+  width: 55%;
+  height: 100%;
+  background-color: #3c31dd;
+  background: rgb(255, 0, 102);
+  background: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(85%, rgba(255, 0, 102, 1)),
+    to(rgba(55, 56, 96, 1))
+  );
+  background: -o-linear-gradient(
+    top,
+    rgba(255, 0, 102, 1) 85%,
+    rgba(55, 56, 96, 1) 100%
+  );
+  background: linear-gradient(
+    180deg,
+    rgba(255, 0, 102, 1) 85%,
+    rgba(55, 56, 96, 1) 100%
+  );
+  -webkit-transform: translate(-4%, 40%);
+  -ms-transform: translate(-4%, 40%);
+  transform: translate(-4%, 40%);
+  z-index: -1;
+}
+
+/* --- Curved bg with SVG via https://www.shapedivider.app/ --- */
+.wave {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.wave svg {
+  position: relative;
+  display: block;
+  width: calc(103% + 1.3px);
+  height: 262px;
+}
+
+.wave .shape-fill {
+  fill: #202731;
+}
+
+/* -- SVG background image via https://haikei.app/ -- */
+.spacer {
+  /* --- Aspect-ratio doesn't work for Safari, as of now. --- */
+  aspect-ratio: 960/300;
+  width: 100%;
+  background-size: cover;
+}
+
+.layer1 {
+  background-image: url("./layer1.svg");
+}
+
+.layer2 {
+  background-image: url("./layer2.svg");
+}
+
+/* --- Flip the section to rotate it --- */
+.flip {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+/* -- media query for mobile devices --- */
+@media (max-width: 768px) {
+  .menu-btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: absolute;
+    top: 2vw;
+    left: 2vw;
+  }
+  .nav_links {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vh;
+    -webkit-transform: translateX(100vw);
+    -ms-transform: translateX(100vw);
+    transform: translateX(100vw);
+    background-color: #202731;
+    -webkit-transition: -webkit-transform 0.3s ease-in-out;
+    transition: -webkit-transform 0.3s ease-in-out;
+    -o-transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+  }
+
+  .nav_links.open {
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+  }
+
+  .nav_links li {
+    width: 100vw;
+    height: 100%;
+  }
+  .nav_links li a {
+    font-size: 3vh;
+  }
+  .nav_links.open > ul {
+    -webkit-padding-start: 0;
+    padding-inline-start: 0;
+  }
+
+  #about h2 {
+    position: initial;
+  }
+  #about {
+    min-height: 200vh;
+  }
+
+  .right-section h2 {
+    font-weight: 400;
+    font-size: 1.4vw;
+  }
+
+  .project_container {
+    height: 43vw;
+  }
+  .project_container p {
+    font-size: 1.13vw;
+  }
+}
+
+.list-link{
+  color: #e9b744;
+  padding-bottom: 0.5vh;
+}
+
+.list-link a:hover {
+  border-radius: 5px;
+  background-color: #f9e7cf;
+  color: #e9b744;
+}
+.tel{
+  color: #e9b744;
+  padding-bottom: 0.5vh;
+}
+
+.vid{
+  width: 40vw;
+  height: 35vh;
+}
