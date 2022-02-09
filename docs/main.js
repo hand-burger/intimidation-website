@@ -25,3 +25,26 @@ function toggle() {
         document.body.style.overflow = 'initial';
     }
 }
+
+function switcha()
+{
+    // Replace image with pushed image
+    document.getElementById("img1").src = "img/aidePushed.png";
+    // Go to form page
+    window.location.href = "form.html";
+}
+
+// read the value of the radio button for extra help
+function getRadioValue() {
+    var radios = document.getElementsByName("help");
+    for (var i = 0; i < radios.length; i++) {
+        if (radios[i].checked) {
+            if (radios[i].value == "oui") {
+                // Change the href of the submit button to the resource page
+                document.getElementById("submit").href = "index.html#projects";
+                console.log("Oui");
+            }
+            return radios[i].value;
+        }
+    }
+}

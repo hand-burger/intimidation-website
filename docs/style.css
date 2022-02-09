@@ -76,6 +76,10 @@ img {
   min-height: 255vh;
 }
 
+#abouter {
+  min-height: 150vh;
+}
+
 /* --- For the Hi I'm Jack part text-align: left doesn't work because of the section display property, so I had to do this to move it to the left --- */
 #hi {
   display: block;
@@ -561,4 +565,53 @@ footer p {
 .vid{
   width: 40vw;
   height: 35vh;
+}
+
+.bazinga:hover{
+  /* Create box shadow */
+  box-shadow: 0 0 10px #8d8268;
+}
+
+.bazinga{
+  height: 34vh;
+  width: 32vw;
+}
+
+/* Make the label go to the top of the text area instead of the bottom */
+#move-up{
+  position: relative;
+  top: -23vh;
+}
+
+.sectionHeader{
+  font-size: 2.5vw;
+  font-weight: 600;
+}
+
+/* Make the form labels bigger */
+.form-group label{
+  font-size: 1.6vw;
+  padding-left: 1vw;
+}
+
+/* Make inputs bigger */
+.form-control{
+  font-size: 1.5vw;
+}
+
+/* Center the submit button */
+
+.submit{
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+#submit{
+  font-size: 4.5vw;
+  color: #e9b744;
+}
+
+.form-group button{
+  margin-bottom: 10vh;
 }

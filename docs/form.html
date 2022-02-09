@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Boilerplate code -->
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<title id='name'>Formulaire pour signaler l'intimidation</title>
+
+<!-- Styles -->
+<link rel="stylesheet" href="style.css">
+<link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+
+<!-- Font garbage -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Prompt:wght@100;400;900&display=swap" rel="stylesheet" />
+
+<!-- Scripts -->
+<!-- <script src="title.js"></script> -->
+
+<script src="main.js" defer></script>
+
+<!-- Font Awesome -->
+<script src='https://use.fontawesome.com/b4ac0c0a38.js'></script>
+
+</head>
+<body>
+    <!-- Information form for victims -->
+    <div>
+        <section class="gradientCurve">
+            <!-- Nav header links -->
+            <header>
+                <div class="menu-btn">
+                  <div class="menu-btn__lines"></div>
+                </div>
+              <div class="nav_links">
+                <ul>
+                  <li>
+                    <a href='index.html' class='menu-item'">Retourner</a>
+                  </li>
+              </div>
+              </header>
+            <header>
+                <div class="menu-btn">
+                    <div class="menu-btn__lines"></div>
+                </div>
+            </header>
+            <!-- Intro text -->
+            <h1>Formulaire pour signaler l'intimidation</h1>
+            <p>Entrez vos informations dans ce formulaire pour signaler l'intimidation personnel ou témoin. Entrez vos informations personnelles ou restez anonyme.</p>
+        
+            <!-- Curve from css ellipses -->
+            <div class="curve"></div>
+        </section>
+        <section id="abouter">
+            <h2 style="color: #e9b744" class="sectionHeader">Votre info</h2>
+            <!-- Create form to enter user info -->
+            <form action="intimidation.php" method="post">
+                <div class="form-group">
+                    <label for="name">Nom</label>
+                    <input type="text" name="name" id="name" class="form-control" placeholder="Nom" required>
+                </div>
+                <div class="form-group">
+                    <label for="firstname">Prénom</label>
+                    <input type="text" name="firstname" id="firstname" class="form-control" placeholder="Prénom" required>
+                </div>
+                <div class="form-group">
+                    <label for="age">Âge</label>
+                    <input type="number" name="age" id="age" class="form-control" placeholder="Âge" required>
+                </div>
+                <div class="form-group">
+                    <label for="" class="form-control">Votre sexe</label>
+                    <div class="form-check">
+                        <input type="radio" name="sexe" id="sexe" value="homme" class="form-check-input" required>
+                        <label for="sexe" class="form-check-label">Homme</label>
+
+                        <input type="radio" name="sexe" id="sexe" value="femme" class="form-check-input" required>
+                        <label for="sexe" class="form-check-label">Femme</label>
+                    </div>
+                </div>
+            <h2 style="color: #e9b744" class="sectionHeader">Ce qui est arrivé</h2>
+            <!-- Input the description of the situation in a big input box -->
+            <div class="form-group">
+                <label for="description" id="move-up">Décrivez la situation</label>
+                <textarea name="description" id="description" class="form-control" rows="7" placeholder="Description" required></textarea>
+            </div>
+            <div class="form-group">
+                <label for="date">Date de la situation</label>
+                <input type="date" name="date" id="date" class="form-control" placeholder="Date" required>
+            </div>
+            <div class="form-group">
+                <label for="time">Heure de la situation</label>
+                <input type="time" name="time" id="time" class="form-control" placeholder="Heure" required>
+            </div>
+            <div class="form-group">
+                <label for="location">Lieu de la situation</label>
+                <input type="text" name="location" id="location" class="form-control" placeholder="Lieu" required>
+            </div>
+            <div class="form-group">
+                <label for="victim">Nom de la victime</label>
+                <input type="text" name="victim" id="victim" class="form-control" placeholder="Nom de la victime" required>
+            </div>
+            <div class="form-group">
+                <label for="victim_firstname">Prénom de la victime</label>
+                <input type="text" name="victim_firstname" id="victim_firstname" class="form-control" placeholder="Prénom de la victime" required>
+            </div>
+            <div class="form-group">
+                <label for="victim_age">Âge de la victime</label>
+                <input type="number" name="victim_age" id="victim_age" class="form-control" placeholder="Âge de la victime" required>
+            </div>
+            <!-- Ask if the user wants additional help -->
+            <div class="form-group">
+                <label for="help">Avez vous besoin d'aide supplémentaire ?</label>
+                <div class="form-check">
+                    <input type="radio" name="help" id="help" value="oui" class="form-check-input" required>
+                    <label for="help" class="form-check-label">Oui</label>
+
+                    <input type="radio" name="help" id="help" value="non" class="form-check-input" required>
+                    <label for="help" class="form-check-label">Non</label>
+                </div>
+
+        </section>
+        <!-- Submit button which goes back to the index page -->
+        <div class="form-group">
+            <button type="submit" class="submit" onclick="getRadioValue()" ><a href=index.html id="submit" onclick="alert('Merci. Votre situation est en cours de traitement. Tu nes pas seul.')">Envoyer</a></button>
+        </div>
+    </div>
+</body>
+</html>
