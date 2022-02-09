@@ -615,3 +615,7 @@ footer p {
 .form-group button{
   margin-bottom: 10vh;
 }
+
+.list-link{
+  text-decoration: underline;
+}
